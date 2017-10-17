@@ -11,8 +11,8 @@ class App < Sinatra::Base
       erb :team
     end
 
-    get '/teams' do
-      erb :team
+    post '/teams' do
+      erb :super_hero
     end
 
 
