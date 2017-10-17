@@ -13,8 +13,8 @@ class App < Sinatra::Base
 
     post '/teams' do
       @team = Team.new(params[:pirate])
-      params[:pirate][:ships].each do |details|
-        Ship.new(details)
+      params[:team][:heroes].each do |details|
+        Hero.new(details)
       end
 
       @ships = Ship.all
