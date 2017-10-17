@@ -1,1 +1,10 @@
+<h1>@team.name</h1>
+<h2>@team.motton</h2>
 
+
+
+<% @heroes.each do |ship| %>
+  <p>Ship Name: <%= ship.name %></p>
+  <p>Ship Type: <%= ship.type %></p>
+  <p>Ship Booty: <%= ship.booty %></p>
+  <% end %>
