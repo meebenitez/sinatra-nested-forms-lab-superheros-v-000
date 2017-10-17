@@ -12,16 +12,6 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      erb :super_hero
-    end
-
-
-
-    get '/new' do
-      erb :'pirates/new'
-    end
-
-    post '/pirates' do
       @pirate = Pirate.new(params[:pirate])
       params[:pirate][:ships].each do |details|
         Ship.new(details)
@@ -29,10 +19,8 @@ class App < Sinatra::Base
 
       @ships = Ship.all
 
-      erb :'pirates/show'
+      erb :super_hero
     end
-
-
 
 
 end
